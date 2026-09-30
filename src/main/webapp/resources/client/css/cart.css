@@ -1,0 +1,46 @@
+   .cart-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+        .quantity-input {
+            width: 70px;
+            text-align: center;
+        }
+        .summary-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+        }
+   .toast {
+       background: white;
+       border-radius: 8px;
+       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+   }
+
+   .cart-badge {
+       font-size: 0.7em;
+       position: relative;
+       top: -8px;
+   }
+
+   .scroll-top {
+       position: fixed;
+       bottom: 20px;
+       right: 20px;
+       background: #28a745;
+       color: white;
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       cursor: pointer;
+       opacity: 0;
+       transition: opacity 0.3s;
+       z-index: 1000;
+   }
+
+   .scroll-top.show {
+       opacity: 1;
+   }

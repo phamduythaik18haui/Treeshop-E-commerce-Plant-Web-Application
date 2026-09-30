@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+    --tree-primary: #1f7a4c;
+    --tree-primary-dark: #14532d;
+    --tree-accent: #f6fff8;
+    --tree-border: rgba(20, 83, 45, 0.12);
+}
+
+.scroll-top-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1090;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--tree-primary), #2db36d);
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(31,122,76,.28);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-fab {
+    position: fixed;
+    right: 24px;
+    bottom: 88px;
+    z-index: 1088;
+}
+
+.contact-fab-toggle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #14532d, #2db36d);
+    color: #fff;
+    box-shadow: 0 16px 30px rgba(20,83,45,.25);
+}
+
+.contact-fab-menu {
+    position: absolute;
+    right: 0;
+    bottom: 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px) scale(.95);
+    transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+}
+
+.contact-fab.open .contact-fab-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.contact-fab-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 148px;
+    justify-content: flex-start;
+    padding: 11px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(0,0,0,.16);
+    font-weight: 600;
+}
+
+.contact-fab-item.sms { background: #0f766e; }
+.contact-fab-item.zalo { background: #0b7ae5; }
+.contact-fab-item.facebook { background: #1877f2; }
+
+.assistant-widget {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 1100;
+}
+
+.assistant-trigger {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, var(--tree-primary), #2db36d);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 16px 30px rgba(31,122,76,.24);
+    font-weight: 700;
+}
+
+.assistant-dot {
+    width: 10px;
+    height: 10px;
+    background: #bbf7d0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(187,247,208,.2);
+}
+
+.assistant-panel {
+    width: 360px;
+    max-width: calc(100vw - 32px);
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.18);
+    overflow: hidden;
+    margin-top: 12px;
+    display: none;
+    border: 1px solid var(--tree-border);
+}
+
+.assistant-panel.open { display: block; }
+
+.assistant-header {
+    background: linear-gradient(135deg, var(--tree-primary-dark), var(--tree-primary));
+    color: white;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.assistant-subtitle {
+    font-size: 12px;
+    opacity: .9;
+}
+
+.assistant-close {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.assistant-messages {
+    padding: 16px;
+    max-height: 320px;
+    overflow-y: auto;
+    background: linear-gradient(180deg, #fff, var(--tree-accent));
+}
+
+.assistant-message {
+    padding: 12px 14px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.assistant-message-user {
+    background: #e2f5ea;
+    margin-left: 46px;
+}
+
+.assistant-message-bot {
+    background: #f3f4f6;
+    margin-right: 34px;
+}
+
+.assistant-quick-replies {
+    padding: 0 16px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.assistant-chip {
+    border: 1px solid var(--tree-border);
+    background: #fff;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.assistant-form {
+    border-top: 1px solid #edf0f3;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.assistant-form input {
+    flex: 1;
+    border: 1px solid #d6e3db;
+    border-radius: 999px;
+    padding: 10px 14px;
+}
+
+.assistant-form button {
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--tree-primary);
+    color: #fff;
+}
+
+.assistant-product-suggestion {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid #eef2f3;
+}
+
+.assistant-product-suggestion img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.assistant-product-suggestion a {
+    color: var(--tree-primary-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.assistant-widget, .assistant-widget *, .contact-fab, .contact-fab *, .scroll-top-btn {
+    font-family: 'Be Vietnam Pro', 'Inter', 'Segoe UI', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 768px) {
+    .assistant-widget { left: 14px; right: 14px; bottom: 14px; }
+    .assistant-panel { width: min(100%, 380px); }
+    .contact-fab { right: 14px; bottom: 78px; }
+    .scroll-top-btn { right: 14px; bottom: 14px; }
+    .contact-fab-item { min-width: 132px; }
+}
